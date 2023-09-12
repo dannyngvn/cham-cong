@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const UserRule = () => {
+const UserRule = props => {
   const { onAddNewUseRule } = props;
   const [useRuleValue, setUseRuleVlue] = useState({
     ruleName: '',
