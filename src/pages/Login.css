@@ -1,0 +1,35 @@
+.login-page a {
+  text-decoration: none;
+}
+
+.login-page {
+  background-image: url('../../../myapp/public/cham-cong.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 30px;
+  background-color: rgba(111, 120, 128, 0.691);
+  border-radius: 15px;
+  gap: 10px;
+}
+
+.login-form input,
+button {
+  border-radius: 5px; /* Đặt bo góc */
+  border: none; /* Ẩn viền trên */
+  height: 30px;
+  padding: 5px;
+}
+
+.login-form label {
+  color: #fff;
+}

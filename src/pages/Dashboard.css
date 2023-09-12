@@ -1,0 +1,37 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.nav-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid orange;
+  width: 10%;
+  align-items: flex-start;
+}
+
+.nav-panel a {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.nav-panel a:hover {
+  border-left: 1px solid orange;
+}
+
+.nav-panel a:visited {
+  color: inherit;
+}
+
+.active-item {
+  color: orange !important;
+  border-left: 1px solid orange;
+}
+
+.main {
+  width: 90%;
+  border: 1px solid orange;
+}
