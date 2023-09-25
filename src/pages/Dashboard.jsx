@@ -6,8 +6,8 @@ const activeClass = params => {
   return params.isActive ? 'active-item' : '';
 };
 
-const Dashboard = () => {
-  const { onSubmitFromUseRule, useRuleList } = props;
+const Dashboard = props => {
+  const { onAddNewUseRule, useRuleList, onAddnewUse } = props;
   return (
     <div className="dashboard">
       <div className="nav-panel">
@@ -28,8 +28,9 @@ const Dashboard = () => {
       </div>
       <div className="main">
         <Outlet
-          onSubmitFromUseRule={onAddNewUseRule}
+          onAddNewUseRule={onAddNewUseRule}
           useRuleList={useRuleList}
+          onAddnewUse={onAddnewUse}
         />
       </div>
     </div>

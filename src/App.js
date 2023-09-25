@@ -11,6 +11,16 @@ import AddUse from './pages/AddUse';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
+  const [useList, setUseList] = useState([]);
+  const onAddnewUse = useValue => {
+    const newUse = {
+      ...useValue,
+      useRuleId: uuidv4(),
+    };
+    const newUseList = [...useList, newUse];
+    setUseList(newUseList);
+  };
+
   const [useRuleList, setUseRuleList] = useState([]);
   const onAddNewUseRule = useRuleValue => {
     const newUseRule = {
@@ -21,6 +31,7 @@ function App() {
     const newUserRuleList = [...useRuleList, newUseRule];
     setUseRuleList(newUserRuleList);
   };
+
   return (
     <Routes>
       <Route path="/" element={<Login />} />
@@ -31,7 +42,12 @@ function App() {
           path="quan-ly-vai-tro"
           element={<UserRule onAddNewUseRule={onAddNewUseRule} />}
         />
-        <Route path="add-use" element={<AddUse useRuleList={useRuleList} />} />
+        <Route
+          path="add-use"
+          element={
+            <AddUse onAddnewUse={onAddnewUse} useRuleList={useRuleList} />
+          }
+        />
       </Route>
 
       <Route path="/forgot-password" element={<ForgotPassword />} />
