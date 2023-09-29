@@ -1,7 +1,13 @@
 import React from 'react';
 
+import User from '../components/User.jsx';
+
 const UseList = () => {
-  return <div>UseList</div>;
+  return (
+    <div>
+      <User />
+    </div>
+  );
 };
 
 export default UseList;

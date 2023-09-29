@@ -1,0 +1,46 @@
+.use {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  background-color: #ececec;
+  width: 300px;
+  border-radius: 15px;
+  margin: 30px;
+  padding: 20px 0;
+}
+
+.status-use {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1; /* Khi bắt đầu, hiển thị */
+  }
+  50% {
+    opacity: 0; /* Giữ ẩn trong 50% thời gian */
+  }
+  100% {
+    opacity: 1; /* Hiển thị lại khi kết thúc */
+  }
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%; /* Để làm cho nó thành hình tròn */
+  cursor: pointer;
+  animation: blink 1s infinite;
+}
+
+.avatar img {
+  width: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
